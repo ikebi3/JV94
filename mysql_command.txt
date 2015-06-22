@@ -1,0 +1,25 @@
+mysql -u root -ppassword
+
+SHOW DATABASES;
+
+USE db名;
+
+SET PASSWORD FOR user=password;
+
+GRANT 権限 ON 対象 TO user;
+
+CREATE DATABASE db名;
+
+DROP DATABASE db名;
+
+SHOW COLUMNS FROM 表名;
+
+CREATE TABLE 表名(column1, ...);
+
+DROP TABLE 表名;
+
+INSERT INTO db名(column1, ...) VALUES(value1, ...);
+INSERT INTO db名 SET column1=xx, ...;
+
+UPDATE 表明 SET column1=xx,,, where 条件;
+DELETE FROM 表名 where 条件;
