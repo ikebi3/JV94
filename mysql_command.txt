@@ -2,24 +2,24 @@ mysql -u root -ppassword
 
 SHOW DATABASES;
 
-USE db–¼;
+USE dbå;
 
 SET PASSWORD FOR user=password;
 
-GRANT Œ ŒÀ ON ‘ÎÛ TO user;
+GRANT æ¨©é™ ON å¯¾è±¡ TO user;
 
-CREATE DATABASE db–¼;
+CREATE DATABASE dbå;
 
-DROP DATABASE db–¼;
+DROP DATABASE dbå;
 
-SHOW COLUMNS FROM •\–¼;
+SHOW COLUMNS FROM è¡¨å;
 
-CREATE TABLE •\–¼(column1, ...);
+CREATE TABLE è¡¨å(column1, ...);
 
-DROP TABLE •\–¼;
+DROP TABLE è¡¨å;
 
-INSERT INTO db–¼(column1, ...) VALUES(value1, ...);
-INSERT INTO db–¼ SET column1=xx, ...;
+INSERT INTO dbå(column1, ...) VALUES(value1, ...);
+INSERT INTO dbå SET column1=xx, ...;
 
-UPDATE •\–¾ SET column1=xx,,, where ðŒ;
-DELETE FROM •\–¼ where ðŒ;
+UPDATE è¡¨å SET column1=xx,,, where æ¡ä»¶;
+DELETE FROM è¡¨å where æ¡ä»¶;
