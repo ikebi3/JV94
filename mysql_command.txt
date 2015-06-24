@@ -19,8 +19,8 @@ CREATE TABLE 表名(column1, ...);
 
 DROP TABLE 表名;
 
-INSERT INTO db名(column1, ...) VALUES(value1, ...);
-INSERT INTO db名 SET column1=value1, ...;
+INSERT INTO 表名(column1, ...) VALUES(value1, ...);
+INSERT INTO 表名 SET column1=value1, ...;
 
 UPDATE 表名 SET column1=value1, ... where 条件;
 DELETE FROM 表名 where 条件;
