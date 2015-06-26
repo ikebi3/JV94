@@ -4,7 +4,7 @@ create database hage character set utf8;
 
 use hage;
 
---show create table user\G テーブル内容表示
+--show create table user;
 
 create table user (
 pkey int primary key auto_increment unique not null,
