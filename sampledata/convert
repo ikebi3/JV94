@@ -1,0 +1,8 @@
+#!/bin/sh
+cp utf8.txt data/
+cat utf8.txt | sed -e 's/utf-8/sjis/g'       | nkf -s    > data/sjis.txt
+cat utf8.txt | sed -e 's/utf-8/ujis/g'       | nkf -e    > data/ujis.txt
+cat utf8.txt | sed -e 's/utf-8/utf-8 80/g'   | nkf -w80  > data/utf880.txt
+cat utf8.txt | sed -e 's/utf-8/utf16BE/g'    | nkf -w16B0> data/utf16BE.txt
+cat utf8.txt | sed -e 's/utf-8/utf16LE/g'    | nkf -w16L0> data/utf16LE.txt
+
