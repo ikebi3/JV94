@@ -4,10 +4,10 @@ create database hage character set utf8;
 
 use hage;
 
---show create table user;
+-- show create table user;
 
 create table user (
-pkey int primary key auto_increment unique not null,
+pkey int primary key auto_increment not null,
 id int(6) zerofill unique not null,
 pw varchar(32) not null,
 salt varchar(6) not null,
@@ -25,3 +25,14 @@ insert into user set id=7, pw=md5('jkl'), salt=md5(now(6)), c_time=now(), u_time
 insert into user set id=8, pw=md5('lkj'), salt=md5(now(6)), c_time=now(), u_time=now();
 insert into user set id=9, pw=md5('mno'), salt=md5(now(6)), c_time=now(), u_time=now();
 insert into user set id=10, pw=md5('onm'), salt=md5(now(6)), c_time=now(), u_time=now();
+
+create user user01@localhost identified by 'password';
+
+GRANT FILE ON  *.* TO user01;
+GRANT SELECT ON sales.* TO user01;
+GRANT
+		INSERT(id,pw,salt),
+		UPDATE(pw),
+		DELETE ON
+				user TO user01;
+FLUSH PRIVILEGES;
