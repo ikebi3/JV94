@@ -18,7 +18,7 @@ public class DbConnect {
 
 		String sql = "select * from hage.user;";
 //		String sql = "select * from mysql.user;";
-		String sqlsub = "show culumns from hage.user;";
+		String sqlsub = "show columns from hage.user;";
 
 		ResultSet rs = sta.executeQuery(sql);
 		ResultSet rs2 = sta.executeQuery(sqlsub);
