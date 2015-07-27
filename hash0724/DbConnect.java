@@ -14,7 +14,7 @@ public class DbConnect {
 	public void connect() throws SQLException {
 
 
-		String url = "JDBC://localhost:3306";
+		String url = "JDBC:mysql://localhost:3306";
 		String user = "root";
 		String password = "";
 		String userid = "6";
@@ -23,15 +23,16 @@ public class DbConnect {
 		System.out.println(con);
 		Statement sta = con.createStatement();
 		String sql = "SELECT id FROM sales.users WHERE id=" + userid + ";";
+		//System.out.println(sql);
 
 		ResultSet rs = sta.executeQuery(sql);
 		rs.next();
-		String salt = rs.getString(4);
+		String salt = rs.getString(1); //1列目を持ってきて
 		String hashedpw = hash(userpw+salt);
 		sql = "SELECT * FROM sales.users WHERE id=" + userid + "AND pw=\'" + hashedpw + "\';";
 		rs.beforeFirst();
 		rs.next();
-		System.out.println(rs.getString(3));
+		System.out.println(rs.getString(1));
 	}
 
 	public String hash(String s) {
