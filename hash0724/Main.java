@@ -1,3 +1,5 @@
+import java.sql.SQLException;
+
 
 public class Main {
 
@@ -5,7 +7,13 @@ public class Main {
 		// TODO 自動生成されたメソッド・スタブ
 
 		DbConnect dbc = new DbConnect();
-		dbc.connect();
+
+		try {
+			dbc.connect();
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
 
 	}
 
